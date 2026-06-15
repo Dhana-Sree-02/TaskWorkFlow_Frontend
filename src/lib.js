@@ -102,16 +102,17 @@ export function callApi(reqMethod, apiUrl, jsonData, formData, responseHandler, 
                 const active = JSON.parse(localStorage.getItem("mock_active_user")) || { fullname: "Demo Admin", role: "Admin" };
                 const isAdmin = active.role === "Administrator" || active.role === "Admin" || parseInt(active.role) === 2;
                 
-                const menulist = [
+                let menulist = [
                     { mid: 1, menu: "Dashboard", icon: "dashboard.png" },
+                    { mid: 2, menu: "My Tasks", icon: "tasks.png" },
+                    { mid: 3, menu: "Semantic Search", icon: "search.png" },
                     { mid: 5, menu: "Profile", icon: "profile.png" }
                 ];
                 
                 if (isAdmin) {
-                    menulist.splice(1, 0, { mid: 4, menu: "User Manager", icon: "users.png" });
-                } else {
-                    menulist.splice(1, 0, { mid: 2, menu: "My Tasks", icon: "tasks.png" });
+                    menulist.splice(3, 0, { mid: 4, menu: "User Manager", icon: "users.png" });
                 }
+
 
                 setTimeout(() => {
                     responseHandler({
