@@ -1,0 +1,241 @@
+/* Swayo Premium Profile Page Stylesheet */
+
+.swayo-profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10px;
+  animation: profile-fade-in 0.3s ease-out forwards;
+}
+
+@keyframes profile-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.swayo-profile-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  padding: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Card Header Section */
+.card-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.profile-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-main);
+  box-shadow: 0 4px 15px rgba(187, 133, 136, 0.2);
+}
+
+.profile-identity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-identity-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+.profile-role-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.profile-active-badge {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* Details Section */
+.card-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.section-title {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.detail-value {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Workflow Stats Row */
+.profile-workflow-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 25px;
+}
+
+.stats-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.metric-box {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.2s;
+}
+
+.metric-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.metric-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-icon.purple { background: rgba(217, 70, 239, 0.1); color: var(--accent); }
+.metric-icon.indigo { background: rgba(99, 102, 241, 0.1); color: var(--primary); }
+.metric-icon.gray { background: rgba(100, 116, 139, 0.1); color: var(--text-muted); }
+.metric-icon.gold { background: rgba(245, 158, 11, 0.1); color: #d97706; }
+
+.metric-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-info .val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.metric-info .lbl {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Progress bar */
+.workflow-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.progress-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.workflow-progress-bar {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.workflow-progress-bar .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  transition: width 0.8s ease-in-out;
+}
+
+/* Responsive adjustment */
+@media(max-width: 600px) {
+  .swayo-profile-card {
+    padding: 24px;
+  }
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding-bottom: 10px;
+  }
+  .stats-metric-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+:root {
+  /* Color Palette - Olive Petal, Golden Clover, Arctic Daisy, Rose Blush, Peach Blossom */
+  --primary: #BB8588;          /* Peach Blossom */
+  --primary-hover: #D8A48F;    /* Rose Blush */
+  --secondary: #A3A380;        /* Olive Petal */
+  --accent: #D7CE93;           /* Golden Clover */
+  --cream: #EFEBCE;            /* Arctic Daisy */
+
+  /* App Layout Colors - LIGHT THEME */
+  --sidebar-bg: #EFEBCE;       /* Arctic Daisy light cream */
+  --sidebar-text: #000000;     /* Pure black sidebar text */
+  --sidebar-active-text: #BB8588; /* Peach Blossom */
+  --sidebar-active-bg: rgba(163, 163, 128, 0.15); /* Soft Olive Petal */
+  
+  --workspace-bg: #FAF9F5;     /* Warm off-white */
+  --card-bg: #ffffff;          /* White card backgrounds */
+  --card-shadow: 0 4px 20px rgba(43, 48, 42, 0.05);
+  --border-color: #E6E5DD;     /* Warm grey border */
+
+  /* Font/Text Colors */
+  --text-main: #000000;        /* Pure black text */
+  --text-muted: #000000;       /* Pure black muted text */
+  --text-light: #ffffff;       /* Light text for solid primary buttons */
+
+  /* Glass/Backdrop fallbacks */
+  --card: #ffffff;
+  --glass: rgba(255, 255, 255, 0.9);
+  --border: #E6E5DD;
+
+  --text: var(--text-main);
+  --muted: var(--text-muted);
+}
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--workspace-bg);
+  color: var(--text-main);
+}
+
+button {
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}

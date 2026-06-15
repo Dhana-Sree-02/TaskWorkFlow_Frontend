@@ -1,0 +1,232 @@
+/* Styles for Signup page */
+
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FAF9F5 0%, #EFEBCE 100%);
+  display: flex;
+  flex-direction: column;
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.signup-header {
+  height: 80px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.signup-header-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: all 0.3s;
+}
+
+.btn-back-home:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+/* Main Content Area */
+.signup-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.signup-card-container {
+  width: 100%;
+  max-width: 480px;
+  z-index: 2;
+}
+
+.signup-glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: card-entry 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes card-entry {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.signup-card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.signup-card-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.signup-card-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Form inputs styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-input-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 12px 15px 12px 44px;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-with-icon input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #BB8588;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
+}
+
+.input-with-icon input:focus + .input-icon {
+  color: #BB8588;
+}
+
+.error-text {
+  font-size: 11px;
+  color: #ff7675;
+  margin-top: 4px;
+}
+
+.form-input-group.has-error input {
+  border-color: #ff7675;
+  background: rgba(255, 118, 117, 0.04);
+}
+
+/* Submit Button */
+.btn-signup-submit {
+  background: linear-gradient(135deg, #BB8588, #D8A48F);
+  color: var(--text-main);
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(187, 133, 136, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-signup-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+}
+
+/* Footer links */
+.signup-card-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.signup-card-footer a {
+  color: #818cf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Section */
+.signup-footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .signup-glass-card {
+    padding: 30px 20px;
+  }
+}
