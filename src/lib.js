@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const apibaseurl = "http://localhost:8000";
+export const apibaseurl = "https://taskworkflow-gateway.onrender.com";
 export const imgurl = import.meta.env.BASE_URL;
 
 // Helper to pre-populate local mock data if empty
